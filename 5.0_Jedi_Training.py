@@ -56,3 +56,20 @@ for i in range(5):
      if statements.
       
 '''
+total=0
+Positive_Count=0
+Zero_Count=0
+Negative_Count=0
+
+for i in range (7):
+    given_number = float(input("Give me a number!"))
+    total+=given_number
+    if given_number>0:
+        Positive_Count+=1
+    elif given_number==1:
+        Zero_Count+=1
+    else:
+        Negative_Count+=1
+
+print(total)
+print("Positives",Positive_Count,"Zeros",Zero_Count,"Negatives",Negative_Count)

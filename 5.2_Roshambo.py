@@ -10,19 +10,26 @@ Add conditional statements to figure out who wins and keep the records
 When the user quits print a win/loss record
 
 '''
+import random
 
-win=0
-loose=0
+win = 0
+loose = 0
 rock = 1
 paper = 2
 scissors = 3
 game=1
+grit = 0
 
-
-import random
-answer=float(input("Type 1 for rack, 2 for paper, and 3 for scissors"))
-number=random.randrange(1,4)
-for i in range(1):
+done = False
+while not done:
+    quit=input("Do you want to Quit?")
+    if quit == "y":
+        done = True
+        print("You didn't quite", grit, "times", win,"/",loose)
+    else:
+        grit+=1
+    answer=float(input("Type 1 for rock, 2 for paper, and 3 for scissors"))
+    number=random.randrange(1,4)
     number = random.randrange(1, 4)
     if number == 1:
         print("Rock")
@@ -44,16 +51,7 @@ for i in range(1):
     else:
         loose += 1
         print("loose")
-    done = False
-    grit = 0
-    while not done:
-        quit=input("Do you want to Quit?")
-        if quit == "y":
-            done = True
-            game -= 1
-        else:
-            grit+=1
-    print("You didn't quite", grit, "times")
+
 
 
 
