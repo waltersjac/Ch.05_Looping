@@ -11,17 +11,21 @@ Heads=0
 Tails=1
 i=2
 e=50
-
+Heads_counter=0
+Tails_counter=0
 
 while e>0:
     e-=1
     number=random.randrange(0,2)
     if i in range(50):
         number=random.randrange(0,2)
-        print(number)
-
-
-
-
+        if number==0:
+            print("Heads")
+            Heads_counter+=1
+        else:
+            print("Tails")
+            Tails_counter+=1
+print("Heads Total",Heads_counter)
+print("Tails Total",Tails_counter)
 
 
